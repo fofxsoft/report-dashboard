@@ -1,0 +1,37 @@
+@import "../../../node_modules/@angular/material/_theming.scss";
+
+@include mat-core;
+
+mat-grid-list {
+    margin: 20px 20px 0 20px;
+
+    mat-grid-tile {
+        @extend .mat-elevation-z6;
+    }
+}
+
+.dashboard-count {
+    background: #fff;
+
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    padding: 30px;
+
+    .title {
+        font-weight: bold;
+    }
+
+    .dashboard-count-positive {
+        color: #3eae0d;
+        font-size: 50px;
+        margin: 0 5px;
+    }
+
+    .dashboard-count-negative {
+        color: #a60606;
+        font-size: 50px;
+        margin: 0 5px;
+    }
+}

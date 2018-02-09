@@ -1,0 +1,32 @@
+<mat-grid-list cols="3" rowHeight="3:1" gutterSize="20">
+    <mat-grid-tile colspan="2" rowspan="2">
+        <fusioncharts width="100%" height="100%" type="column2d" dataFormat="json" [dataSource]="bar"></fusioncharts>
+    </mat-grid-tile>
+    <mat-grid-tile rowspan="2">
+        <fusioncharts width="100%" height="100%" type="pie2d" dataFormat="json" [dataSource]="pie"></fusioncharts>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="dashboard-count">
+            <div class="title">Sales This Year</div>
+            <div class="subtitle">Percent change this year vs last year</div>
+            <div class="dashboard-count-positive">{{ change | number }}%</div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="dashboard-count">
+            <div class="title">Percent of Goal</div>
+            <div class="subtitle">Percent of goal matched</div>
+            <div class="dashboard-count-negative">{{ goal | number }}%</div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="dashboard-count">
+            <div class="title">Total Sales</div>
+            <div class="subtitle">Total revenue this year</div>
+            <div class="dashboard-count-positive">{{ revenue | number }}</div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="3" rowspan="2">
+        <fusioncharts width="100%" height="100%" type="mscombi2d" dataFormat="json" [dataSource]="trend"></fusioncharts>
+    </mat-grid-tile>
+</mat-grid-list>
